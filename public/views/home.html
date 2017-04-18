@@ -1,0 +1,142 @@
+
+<!-- Pulkit carusel -->
+
+	<div class="modal fade" id="loginform">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+
+						<div class="modal-header">
+							<label class="modal-title">Login</label>
+							<button class="close" data-dismiss="modal">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+
+						<div class="modal-body">
+							<div class="form-group">
+							<form action = "/login" method="post">
+							<label class="toooltip-test" title="Enter Your Email">Email:</label><input type="email" name="email" class="form-control">
+							<label class="tooltip-test" title="Enter Password">Password:</label><input type="password" name="password" class="form-control">
+								<div class="modal-footer">
+									<button type="submit" class="btn btn-primary">Login</button>
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</form>
+							</div>
+						</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="signupform">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<label class="modal-title">Sign Up</label>
+					<button class="close" data-dismiss="modal">
+						<span aria-hidden="true">x</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="form-group">
+						<form action="/signup" method="post">
+							<label class="tooltip-test" title="Enter your First Name">First Name</label><input type="text" name="firstname" class="form-control">
+							<label class="tooltip-test" title="Enter your Last Name">Last Name</label><input type="text" name="lastname" class="form-control">
+							<label class="tooltip-test" title="Enter your Date of Birth">Date of Birth</label><input type="date" name="dob" class="form-control">
+							<label class="tooltip-test" title="Enter your Email ID">Email</label><input type="email" name="email" class="form-control">
+							<label class="tooltip-test" title="Enter your password">Password</label><input type="password" name="password" class="form-control"><br>
+							<label class="tooltip-test" title="Select your department">Department&nbsp</label><select name="dept"><option>CSE</option><option>ME</option></select><br><br>
+							<label class="tooltip-test" title="Select Account Type">Account Type</label>&nbsp;
+							<input type="radio" name="acctype" value="student" checked>Student &nbsp;
+							<input type="radio" name="acctype" value="student" >Faculty
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary">Sign Up</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div style="padding-top:55px;" id="dishes-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="3000">
+
+
+			<!-- carousel indicators-->
+				<ol class="carousel-indicators">
+					<li data-target="#dishes-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#dishes-carousel" data-slide-to="1"></li>
+					<li data-target="#dishes-carousel" data-slide-to="2"></li>
+					<li data-target="#dishes-carousel" data-slide-to="3"></li>
+					<li data-target="#dishes-carousel" data-slide-to="4"></li>
+					<li data-target="#dishes-carousel" data-slide-to="5"></li>
+					<li data-target="#dishes-carousel" data-slide-to="6"></li>
+					<li data-target="#dishes-carousel" data-slide-to="7"></li>
+					<li data-target="#dishes-carousel" data-slide-to="8"></li>
+				</ol>
+
+
+			<!-- wrapper for content -->
+				<div class="carousel-inner" role="listbox" >
+					<div class="item active">
+						<img class="img-responsive" style="margin: auto; width: 100%; height: auto;" src="images/food/pav-bhaji.Jpeg" alt="Pav-Bhaji">
+						<div class="carousel-caption">
+							<h2>Pav Bhaji</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img style="margin: auto; width:100%; height:auto;" src="images/food/kathiroll.Jpeg" alt="Kathi-Roll">
+						<div class="carousel-caption">
+							<h2>Kathi Roll</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img style="margin: auto; width:100%; height:auto;" src="images/food/manchurian.Jpeg" alt="Manchurian">
+						<div class="carousel-caption">
+							<h2>Manchurian</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img style="margin: auto; width:100%; height:auto;" src="images/food/macroni.Jpeg" alt="Macroni">
+						<div class="carousel-caption">
+							<h2>Macroni Pasta</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img style="margin: auto; width:100%; height:auto;" src="images/food/paneerbuttermasala.Jpeg" alt="Paneer-Butter-Masala">
+						<div class="carousel-caption">
+							<h2>Paneer Butter Masala</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img style="margin: auto; width:100%; height:auto;" src="images/food/pindichole.Jpeg" alt="Pindi-Chole">
+						<div class="carousel-caption">
+							<h2>Pindi Chole</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img style="margin: auto; width:100%; height:auto;" src="images/food/springroll.Jpeg" alt="Spring-Roll">
+						<div class="carousel-caption">
+							<h2>Spring Roll</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img style="margin: auto; width:100%; height:auto;" src="images/food/tikki.Jpeg" alt="Aalu-Tikki">
+						<div class="carousel-caption">
+							<h2>Aalu Tikki</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img style="margin: auto; width:100%; height:auto;" src="images/food/tomatosoup.Jpeg" alt="Tomato-Soup">
+						<div class="carousel-caption">
+							<h2>Tomato Soup</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+  		</div>
+	</div>

@@ -1,0 +1,33 @@
+<div class = "container">
+<div class="jumbotron text-center" style="padding-top: 15%;background:white">
+  <form  method='post' ng-submit = "addItem()">
+
+    <div class = "form-group top-buffe">
+        <label for="name">Name</label>
+      <input style="width: 200px;margin:auto;" type="text" class="form-control" ng-model = "name" id="name" placeholder="Item Name" required>
+    </div>
+
+    <div class = "form-group">
+    <label for="price">Price</label>
+      <input style="width: 200px;margin:auto" type="text" ng-model="price" class="form-control" id="price" placeholder="Item Price" required>
+    </div>
+    <div class = "form-group">
+        <label for="image">Image</label>
+      <input style="width: 200px;margin:auto;" type="text" ng-model="image" class="form-control" id="image" placeholder="Item image" required>
+    </div>
+    <div class = "form-group">
+        <label for="size">Size</label>
+        <select style="width: 200px;margin:auto;" class="form-control" id="size" ng-model="size" ng-options="x for x in size">
+
+        </select>
+    </div>
+    <div class = "form-group">
+        <label for="Available">Available</label>
+        <select style="width: 200px;margin:auto;" class="form-control" id="Available" ng-model="Available" ng-options="x for x in Available"></select>
+    </div>
+    <button type="submit"  class="btn btn-primary">Add new Item</button>
+   </form>
+
+   <h3 ng-model = "test">{{test}}</h3>
+</div>
+</div>

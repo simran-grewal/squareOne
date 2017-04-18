@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+
+	<title>Square One</title>
+
+	<!-- CSS -->
+	 <!-- <link rel="stylesheet" href="libs/jquery/dist/jquery.min.js">
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.js">
+
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-social.css"> -->
+
+<!-- Pulkit -->
+<link rel="stylesheet" href="stylesheets/bootstrap.css">
+<link rel="stylesheet" href="stylesheets/bootstrap-social.css">
+
+<script type="text/javascript" src="javascripts/jquery-3.1.1.min.js" ></script>
+<script type="text/javascript" src="javascripts/bootstrap.js" ></script>
+
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+	<!-- JS -->
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-route/angular-route.min.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
+	<script src="js/controllers/MainCtrl.js"></script>
+	<script src="js/controllers/NerdCtrl.js"></script>
+	<script src="js/controllers/MenuCtrl.js"></script>
+	<script src="js/controllers/additemCtrl.js"></script>
+	<script src="js/services/NerdService.js"></script>
+	<script src="js/controllers/GeekCtrl.js"></script>
+	<script src="js/services/GeekService.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="sampleApp" ng-controller="NerdController">
+
+
+	<!-- HEADER -->
+	<!-- <nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">Stencil: Node and Angular</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="/nerds">Nerds</a></li>
+			<li><a href="/geeks">Geeks</a></li>
+		</ul>
+	</nav> -->
+	<!-- Pulkit NavBar -->
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class = "container-fluid">
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	      		</button>
+
+					<a class="navbar-brand" href="/"><img width="28px" height="28px" src="images/sq1.png"></a>
+					<a class="navbar-brand" style="padding-top: 18px;  font-family: Franklin Gothic Medium; font-size: 20px;" href="/">Square One</a>
+
+			</div>
+
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<!-- <li ng-class = "{active: isActive('/')}" role="presentation"><a href="/">Order</a></li> -->
+						<li ng-class = "{active: isActive('/menu')}" role="presentation"><a href="/menu">Menu</a></li>
+						<li ng-class = "{active: isActive('#')}" role="presentation"><a href="#">Help</a></li>
+						<li ng-class = "{active: isActive('/additem')}" role="presentation"><a href="/additem">Add Item</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a data-toggle="modal" data-target="#loginform"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						<li><a data-toggle="modal" data-target=""><span class="glyphicon glyphicon-user"></span> Signup</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+
+<!--Sign Up -->
+
+	<!-- ANGULAR DYNAMIC CONTENT -->
+	<div ng-view>
+
+	</div>
+
+
+</body>
+</html>

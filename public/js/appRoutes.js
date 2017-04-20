@@ -27,6 +27,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'views/additem.html',
 			controller: 'additemController'
 		})
+
+		.when('/signup', {
+			templateUrl: 'views/signup.html',
+			controller: 'signupController'
+		})
 	$locationProvider.html5Mode(true);
 
 }]);

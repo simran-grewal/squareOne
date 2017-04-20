@@ -32,7 +32,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
  // set the static files location /public/img will be /img for users
 app.use(express.static(publicPath));
 // routes ==================================================
-require('./app/routes')(app); // pass our application into our routes
+// require('./app/routes')(app); // pass our application into our routes
 app.post('/additem', (req, res) => {
 	 var name = req.body.name;
 	 var image = req.body.image;
@@ -70,7 +70,9 @@ app.post('/additem', (req, res) => {
 //app.use('/', require('./app/routes'));
 
 // start app ===============================================
-
+app.get('*', function(req, res) {
+	res.sendfile('./public/index.html');
+});
 app.use("/menu", express.static(__dirname + "/public"));
 app.use("/additem", express.static(__dirname + "/public"));
 

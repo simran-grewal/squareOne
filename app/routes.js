@@ -1,4 +1,3 @@
-var express    = require('express');
 module.exports = function(app) {
 
 	// server routes ===========================================================
@@ -7,10 +6,8 @@ module.exports = function(app) {
 
 	// frontend routes =========================================================
 	// route to handle all angular requests
-	//
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
-
 
 };

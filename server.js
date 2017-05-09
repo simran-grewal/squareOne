@@ -60,7 +60,7 @@ app.post('/additem', (req, res) => {
 				res.send(arr);
 			})
 });
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
 	res.sendfile('./public/index.html');
 });
 

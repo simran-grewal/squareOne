@@ -12,6 +12,14 @@ var Product = require('./app/models/items');
 //mongoose.connect('mongodb://localhost:27017/ordermyfood');
 var port = process.env.PORT || 5000; // set our port
 // mongoose.connect(db.url); // connect to our mongoDB database (commented out after you enter in your own credentials)
+app.use(function(req, res, next) {
+	// req.headers is for Heroku it Does'not Exist Locally
+	if (req.headers['x-forwarded-proto'] === 'https') {
+		res.redirect('http://' + req.hostname + req.url);
+	} else {
+		next();
+	}
+});
 mongoose.connect('food:abcd@ds163020.mlab.com:63020/dbfood');
 // get all data/stuff of the body (POST) parameters
 app.use(bodyParser.json()); // parse application/json
@@ -58,7 +66,7 @@ app.get('*', function(req, res) {
 
 // start app ===============================================
 app.listen(port, function(){
-	console.log('Magic happens on port ' + port); 	
+	console.log('Magic happens on port ' + port);
 });
 		// shoutout to the user
 exports = module.exports = app; 						// expose app

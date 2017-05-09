@@ -57,6 +57,8 @@ app.get('*', function(req, res) {
 });
 
 // start app ===============================================
-app.listen(port);
-console.log('Magic happens on port ' + port); 			// shoutout to the user
+app.listen(port, function(){
+	console.log('Magic happens on port ' + port); 	
+});
+		// shoutout to the user
 exports = module.exports = app; 						// expose app
